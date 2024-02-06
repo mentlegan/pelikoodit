@@ -14,30 +14,31 @@ size = Vector2(894, 71)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_sdoid")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-0.5, -1.5)
+position = Vector2(-80, -97)
 shape = SubResource("RectangleShape2D_1x855")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D"]
+position = Vector2(1, 2)
 texture = ExtResource("1_esnt2")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Sprite2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D/Sprite2D"]
 position = Vector2(1, -46.5)
 scale = Vector2(0.5625, 0.273438)
 texture = ExtResource("1_esnt2")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
-position = Vector2(-132, 112)
+position = Vector2(-168, 10)
 shape = SubResource("RectangleShape2D_dudc7")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D"]
-position = Vector2(-136, 112)
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D/CollisionShape2D"]
+position = Vector2(-4, 0)
 scale = Vector2(7, 0.554688)
 texture = ExtResource("1_esnt2")
 
@@ -45,10 +46,10 @@ texture = ExtResource("1_esnt2")
 position = Vector2(60, -179)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
-position = Vector2(517, 58)
+position = Vector2(480, 116)
 shape = SubResource("RectangleShape2D_dudc7")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D2"]
-position = Vector2(514, 58)
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D2/CollisionShape2D"]
+position = Vector2(-3, 0)
 scale = Vector2(6.98438, 0.539063)
 texture = ExtResource("1_esnt2")
