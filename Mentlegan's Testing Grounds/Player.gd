@@ -17,7 +17,7 @@ func _physics_process(delta):
 		current_jumps = 0
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() or current_jumps:
+	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or current_jumps < MAX_JUMPS):
 		current_jumps += 1
 		velocity.y = JUMP_VELOCITY
 
